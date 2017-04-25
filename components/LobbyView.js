@@ -8,6 +8,8 @@ import {
     Image
 } from 'react-native';
 
+import FitImage from 'react-native-fit-image';
+
 import {Button, Card} from 'react-native-material-design';
 
 
@@ -27,6 +29,17 @@ class LobbyView extends Component {
                 </View>
                 <View style={[styles.half, styles.footerColor]}>
 
+                    <Button
+                        text="GO TO BITCOIN CALCULATOR"
+                        large="true"
+                        iconRight
+                        buttonStyle={styles.bottom}
+                        icon={{name: 'code'}}/>
+
+                    <FitImage
+                        source={require('../img/dev_logo.png')}
+                        style={styles.devImage}
+                    />
                 </View>
             </View>
 
@@ -47,6 +60,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
     },
+
+    bottom:{
+        borderWidth:1,
+        borderBottomColor: '#47315a',
+        borderColor:'white'
+    },
+
     welcome: {
         fontSize: 20,
         textAlign: 'right',
@@ -56,6 +76,13 @@ const styles = StyleSheet.create({
         resizeMode: 'contain',
         opacity: 0.8,
         width: 300,
+
+    },
+    devImage: {
+        marginTop:100,
+        resizeMode: 'contain',
+        width: 100,
+        height:75
 
     },
     half: {
