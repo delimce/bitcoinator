@@ -13,7 +13,7 @@ import {
 
 import { Button, Card } from 'react-native-material-design';
 
-const Lobby = require('./components/lobbyView');
+const Lobby = require('./components/LobbyView');
 
 export default class appbitcoin extends Component {
   render() {
@@ -21,11 +21,9 @@ export default class appbitcoin extends Component {
      
     <Lobby></Lobby>
 
-
     );
   }
 }
-
 
 
 AppRegistry.registerComponent('appbitcoin', () => appbitcoin);
