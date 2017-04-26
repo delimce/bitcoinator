@@ -11,15 +11,23 @@ import {
   View
 } from 'react-native';
 
-import { Button, Card } from 'react-native-material-design';
+import Router from 'react-native-simple-router';
 
-const Lobby = require('./components/LobbyView');
+const Init = require('./components/InitialView');
+
+
+const firstRoute = {
+    name: 'Welcome!',
+    component: Init,
+};
 
 export default class appbitcoin extends Component {
   render() {
     return (
-     
-    <Lobby></Lobby>
+
+        <Router
+            firstRoute={firstRoute}
+        />
 
     );
   }
